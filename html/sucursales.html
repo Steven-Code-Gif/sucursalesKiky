@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Title -->
+    <title>KIKY</title>
+    <!-- Maps -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.1/dist/leaflet.css"
+      integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+      crossorigin=""
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.76.1/dist/L.Control.Locate.min.css"
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js"
+      integrity="sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s="
+      crossorigin=""
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.76.1/dist/L.Control.Locate.min.js"
+      charset="utf-8"
+    ></script>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,900"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Oleo+Script"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap CSS -->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome CSS -->
+    <link href="../assets/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- Magnific Popup CSS -->
+    <link href="../assets/css/magnific-popup.css" rel="stylesheet" />
+    <!-- Mobile Menu CSS -->
+    <link href="../assets/css/slicknav.min.css" rel="stylesheet" />
+    <!-- Owl Carousel CSS -->
+    <link href="../assets/css/owl.carousel.css" rel="stylesheet" />
+    <!-- Main CSS -->
+    <link href="../assets/css/style.css" rel="stylesheet" />
+    <!-- Responsive CSS -->
+    <link href="../assets/css/responsive.css" rel="stylesheet" />
+    <!-- Favicon Ico -->
+    <link rel="shortcut icon" href="#" type="image/x-icon" />
+    <script src="../assets/js/leaflet-routing-machine.js"></script>
+    <link rel="stylesheet" href="../assets/js/leaflet-routing-machine.css" />
+    <link
+      rel="stylesheet"
+      href="//unpkg.com/leaflet-gesture-handling/dist/leaflet-gesture-handling.min.css"
+      type="text/css"
+    />
+    <script src="//unpkg.com/leaflet-gesture-handling"></script>
+  </head>
+  <body>
+  
+    <!-- Page Header Area Start 
+    <section class="page-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-12">
+            <h2></h2>
+            <ul>
+              <li><a href=""></a> &nbsp;</li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>-->
+    <!-- Google Map Area Start -->
+    <div class="section-title text-center section-title2">
+      <h4>Encuentra tu Mansión mas Cercana</h4>
+    </div>
+    <div id="map"></div>
+    <button
+      id="route-btn"
+      title="Ver la ruta más cercana"
+      alt="Ver la ruta más cercana"
+    ></button>
+    <!-- Google Map Area End -->
+    <div class="sucursal-grid">
+      <a href="https://goo.gl/maps/aB9JRJ7buRSSbryi9" target="_blank">
+        <img src="../assets/img/iconos/location.svg" alt="" />
+        <h2>Suc. Av. Cusis</h2>
+        <p>Av. Los Cusis Av. Cusis entre Banzer y Beni</p>
+        <div class="whatsapp">
+          <img src="" alt="" />
+          <p>Atención de: 11:00am - 22:00pm</p>
+        </div>
+      </a>
+      <a href="https://goo.gl/maps/BbnQEawzkn9NWiTq8" target="_blank">
+        <img src="../assets/img/iconos/location.svg" alt="" />
+        <h2>Suc. Santa Cruz</h2>
+        <p>2do anillo casi Av. Virgen de Cotoca</p>
+        <div class="whatsapp">
+          <img src="" alt="" />
+          <p>Atención de: 11:00am - 22:00pm</p>
+        </div>
+      </a>
+      <a href="https://goo.gl/maps/b4tvtKpofcU4Tk4V9" target="_blank">
+        <img src="../assets/img/iconos/location.svg" alt="" />
+        <h2>Suc. Ventura</h2>
+        <p>4to anillo Diagonal al Ventura Mall</p>
+        <div class="whatsapp">
+          <img src="" alt="" />
+          <p>Atención de: 11:00am - 22:00pm</p>
+        </div>
+      </a>
+      <a href="https://goo.gl/maps/JE9DaNQStEe999fj6" target="_blank">
+        <img src="../assets/img/iconos/location.svg" alt="" />
+        <h2>Suc. Av. Grigota</h2>
+        <p>Av. Grigota. 5to anillo Doble via la Guardia</p>
+        <div class="whatsapp">
+          <img src="" alt="" />
+          <p>Atención de: 11:00am - 22:00pm</p>
+        </div>
+      </a>
+      <a href="https://goo.gl/maps/aHdrq6ZK7Eyi1n2N8" target="_blank">
+        <img src="../assets/img/iconos/location.svg" alt="" />
+        <h2>Suc. Av. Banzer</h2>
+        <p>Av. Banzer. Entre 7mo y 8vo anillo</p>
+        <div class="whatsapp">
+          <img src="" alt="" />
+          <p>Atención de: 11:00am - 22:00pm</p>
+        </div>
+      </a>
+      <a href="https://goo.gl/maps/ktxEitVx5NNFjc9z7" target="_blank">
+        <img src="../assets/img/iconos/location.svg" alt="" />
+        <h2>Suc. Virgen Cotoca</h2>
+        <p>Virgen de Cotoca. 4to anillo entre Av. Virgen de Cotoca y Guapay</p>
+        <div class="whatsapp">
+          <img src="" alt="" />
+          <p>Atención de: 11:00am - 22:00pm</p>
+        </div>
+      </a>
+      <a href="https://goo.gl/maps/YMUnTJMd4cJnW6wb6" target="_blank">
+        <img src="../assets/img/iconos/location.svg" alt="" />
+        <h2>Suc. Trompillo</h2>
+        <p>Trompillo Diagonal plazuela el Trompillo</p>
+        <div class="whatsapp">
+          <img src="" alt="" />
+          <p>Atención de: 11:00am - 22:00pm</p>
+        </div>
+      </a>
+      <a href="https://goo.gl/maps/AzMCLQaCNuYjYhnYA" target="_blank">
+        <img src="../assets/img/iconos/location.svg" alt="" />
+        <h2>Suc. Av. Pirai</h2>
+        <p>Av. Pirai Entre 2do y 3er anillo Av. Pirai</p>
+        <div class="whatsapp">
+          <img src="" alt="" />
+          <p>Atención de: 11:00am - 22:00pm</p>
+        </div>
+      </a>
+      <a href="https://goo.gl/maps/qjSSzpoxee3gKiDt6" target="_blank">
+        <img src="../assets/img/iconos/location.svg" alt="" />
+        <h2>Suc. Upsa</h2>
+        <p>Upsa. 4to anillo Av. Paragua</p>
+        <div class="whatsapp">
+          <img src="" alt="" />
+          <p>Atención de: 11:00am - 22:00pm</p>
+        </div>
+      </a>
+      <a href="https://goo.gl/maps/VCk263TybkskqvE1A" target="_blank">
+        <img src="../assets/img/iconos/location.svg" alt="" />
+        <h2>Suc. Av. Santos Dumont</h2>
+        <p>Av. Santos Dumont. Casi 4to anillo</p>
+        <div class="whatsapp">
+          <img src="" alt="" />
+          <p>Atención de: 11:00am - 22:00pm</p>
+        </div>
+      </a>
+      <a href="https://goo.gl/maps/wkzUiW71VXFCS2Pj8" target="_blank">
+        <img src="../assets/img/iconos/location.svg" alt="" />
+        <h2>Suc. Av. Busch</h2>
+        <p>Av. Busch. 3er anillo interno, frente al patio Design</p>
+        <div class="whatsapp">
+          <img src="" alt="" />
+          <p>Atención de: 11:00am - 22:00pm</p>
+        </div>
+      </a>
+      <a href="https://goo.gl/maps/M8DLtwqQZ78kLq8L8" target="_blank">
+        <img src="../assets/img/iconos/location.svg" alt="" />
+        <h2> Suc. Shopping Fidalga</h2>
+        <p>Av.Banzer 3er anillo Externo</p>
+        <div class="whatsapp">
+          <img src="" alt="" />
+          <p>Atención de: 11:00am - 22:00pm</p>
+        </div>
+      </a>
+    </div>
+    <!-- Footer Area Start -->
+    <footer>
+      <div class="contenedor">
+        <div class="redes-sociales">
+          <a href="https://www.facebook.com/polloskiky" target="_blank"
+          ><i class="fa fa-facebook"></i></a>
+          <a href="https://www.instagram.com/tiokiky/" target="_blank"
+          ><i class="fa fa-instagram"></i></a>
+        </div>
+        <div class="">
+          <p class="copy"> 2022 KIKY | Desarrollado por JIPAZ CORP S.R.L.</p>
+        </div>
+      </div>
+      </footer>
+      
+    <!-- Jquery JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="../assets/js/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <!-- Magnific JS -->
+    <script src="../assets/js/jquery.magnific-popup.min.js"></script>
+    <!-- Typed JS -->
+    <script src="../assets/js/typed.js"></script>
+    <!-- Mobile Menu JS -->
+    <script src="../assets/js/jquery.slicknav.min.js"></script>
+    <!-- Owl Carousel JS -->
+    <script src="../assets/js/owl.carousel.min.js"></script>
+    <!-- Main JS -->
+    <script src="../assets/js/main.js"></script>
+    <!-- Maps -->
+    <script src="../assets/js/maps.js"></script>
+  </body>
+</html>
